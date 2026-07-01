@@ -1,0 +1,197 @@
+/* --- CONFIGURACIÓN GENERAL Y VARIABLES --- */
+:root {
+    --primary-color: #ff4757;    /* Rojo/Naranja llamativo para botones */
+    --secondary-color: #ffffff;  /* Blanco */
+    --dark-color: #1e1e24;       /* Fondo oscuro para la navbar */
+    --text-light: #ffffff;
+    --text-gray: #f1f2f6;
+    --font-titles: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: #f8f9fa;
+    color: var(--dark-color);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* --- BARRA DE NAVEGACIÓN (NAVBAR) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(30, 30, 36, 0.95); /* Fondo oscuro semitransparente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+    font-family: var(--font-titles);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.logo a span {
+    color: var(--primary-color);
+}
+
+.nav-menu a {
+    color: var(--text-gray);
+    margin: 0 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.nav-menu a:hover, 
+.nav-menu a.active {
+    color: var(--primary-color);
+}
+
+.btn-reserve {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.btn-reserve:hover {
+    background-color: #ff6b81;
+    transform: translateY(-2px);
+}
+
+/* --- SECCIÓN DE INICIO (HERO SECTION) --- */
+.hero-section {
+    position: relative;
+    height: 100vh; /* Ocupa todo el alto de la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Reemplaza esta URL por la foto real de tu restaurante o plato */
+    background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto Parallax suave */
+}
+
+/* Capa oscura encima de la imagen para que el texto blanco sea legible */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Por encima de la capa oscura */
+    max-width: 800px;
+    padding: 0 20px;
+    color: var(--text-light);
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-family: var(--font-titles);
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: var(--text-gray);
+    margin-bottom: 35px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Botones de acción del Hero */
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: #ff6b81;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 2px solid var(--text-light);
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-light);
+    color: var(--dark-color);
+    transform: translateY(-3px);
+}
+
+/* --- RESPONSIVE BÁSICO (Para celulares) --- */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Esconde el menú en móviles por ahora */
+    }
+    .hero-title {
+        font-size: 38px;
+    }
+    .hero-description {
+        font-size: 16px;
+    }
+    .hero-actions {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    .btn-primary, .btn-secondary {
+        width: 80%;
+    }
+}
