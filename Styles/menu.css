@@ -1,0 +1,177 @@
+/* --- VARIABLES --- */
+:root {
+    --primary-color: #ff4757;
+    --dark-color: #1e1e24;
+    --text-muted: #747d8c;
+    --bg-light: #ffffff;
+    --bg-section: #f8f9fa;
+    --font-titles: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-section);
+    color: var(--dark-color);
+}
+
+/* --- ENCABEZADO DEL MENÚ --- */
+.menu-section {
+    /* Añadimos un padding superior para dejar espacio a la navbar fija */
+    padding-top: 120px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-subtitle {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.menu-title {
+    font-family: var(--font-titles);
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.underline {
+    width: 70px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 15px auto 0 auto;
+}
+
+/* --- BOTONES DE FILTRO --- */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: var(--bg-light);
+    color: var(--dark-color);
+    border: 1px solid #e4e7eb;
+    padding: 10px 24px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.filter-btn:hover, 
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* --- CUADRÍCULA DEL MENÚ (GRID) --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Muestra 2 columnas si hay espacio */
+    gap: 30px;
+}
+
+/* Contenedor del plato individual */
+.menu-item {
+    display: flex;
+    background-color: var(--bg-light);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+}
+
+/* Animación cuando el elemento se oculta o se muestra */
+.menu-item.hide {
+    display: none;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.item-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Recorta la imagen para que encaje perfectamente */
+}
+
+.item-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.item-title-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.item-title-price h3 {
+    font-family: var(--font-titles);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.price {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.item-description {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr; /* 1 sola columna en dispositivos pequeños */
+    }
+    
+    .menu-item {
+        flex-direction: column; /* La imagen se posiciona arriba del texto en móviles */
+    }
+
+    .item-img {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .menu-title {
+        font-size: 32px;
+    }
+}

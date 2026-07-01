@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Menú - Sabor Único</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Estilos de la barra de navegación y generales -->
+    <link rel="stylesheet" href="../styles.css">
+    <!-- Estilos específicos de la página de menú -->
+    <link rel="stylesheet" href="../Styles/menu.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="../index.htm">Sabor<span>Único</span></a>
+        </div>
+        <nav class="nav-menu">
+            <a href="../index.htm">Inicio</a>
+            <a href="#" class="active">Menú</a>
+            <a href="#">Promociones</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <div class="nav-btn">
+            <a href="#" class="btn-reserve">Reservar Mesa</a>
+        </div>
+    </header>
+
+    <section class="menu-section">
+        <div class="menu-header">
+            <p class="menu-subtitle">Nuestras Especialidades</p>
+            <h2 class="menu-title">Descubre Nuestro Menú</h2>
+            <div class="underline"></div>
+        </div>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="todos">Todos</button>
+            <button class="filter-btn" data-filter="fuertes">Platos Fuertes</button>
+            <button class="filter-btn" data-filter="entradas">Entradas</button>
+            <button class="filter-btn" data-filter="postres-bebidas">Postres & Bebidas</button>
+        </div>
+
+        <div class="menu-grid">
+            
+            <div class="menu-item" data-category="fuertes">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600" alt="Costillas BBQ" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-price">
+                        <h3>Costillas a la BBQ Premium</h3>
+                        <span class="price">$16.50</span>
+                    </div>
+                    <p class="item-description">Costillas de cerdo ahumadas lentamente, bañadas en salsa BBQ artesanal acompañadas de papas rústicas.</p>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="entradas">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600" alt="Ensalada Salmon" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-price">
+                        <h3>Ensalada de Salmón y Aguacate</h3>
+                        <span class="price">$10.00</span>
+                    </div>
+                    <p class="item-description">Mix de lechugas frescas, salmón a la plancha, aguacate, tomates cherry y aderezo de cítricos.</p>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="fuertes">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600" alt="Pizza Artesanal" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-price">
+                        <h3>Pizza Rústica de Prosciutto</h3>
+                        <span class="price">$14.00</span>
+                    </div>
+                    <p class="item-description">Masa madre crujiente, salsa de tomate de la casa, mozzarella, prosciutto madurado y rúcula fresca.</p>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="postres-bebidas">
+                <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?q=80&w=600" alt="Volcán de Chocolate" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-price">
+                        <h3>Volcán de Chocolate</h3>
+                        <span class="price">$6.50</span>
+                    </div>
+                    <p class="item-description">Bizcocho de chocolate oscuro con corazón líquido fundido, acompañado de helado de vainilla artesanal.</p>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="entradas">
+                <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=600" alt="Dumplings" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-price">
+                        <h3>Gyozas de Cerdo al Vapor</h3>
+                        <span class="price">$8.50</span>
+                    </div>
+                    <p class="item-description">Cinco empanadillas japonesas rellenas de carne de cerdo seleccionada y vegetales, con salsa ponzu.</p>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="postres-bebidas">
+                <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600" alt="Cóctel de la Casa" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-price">
+                        <h3>Mocktail de Frutos Rojos</h3>
+                        <span class="price">$5.00</span>
+                    </div>
+                    <p class="item-description">Refrescante combinación de infusión de frutos del bosque, agua con gas, limón y un toque de menta fresca.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="../javascript/menu.js"></script>
+</body>
+</html>
