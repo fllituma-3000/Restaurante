@@ -1,0 +1,114 @@
+.contenedor-contacto {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+}
+
+.info-contacto {
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.info-contacto h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.bloque-dato {
+    margin-bottom: 25px;
+}
+
+.bloque-dato h4 {
+    color: var(--color-rojo);
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.bloque-dato p {
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+.formulario-contacto {
+    background-color: var(--color-claro);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.formulario-contacto h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+}
+
+.grupo-input label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.grupo-input input, .grupo-input textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+.grupo-input input:focus, .grupo-input textarea:focus {
+    outline: none;
+    border-color: var(--color-rojo);
+}
+
+.btn-enviar {
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    border: none;
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.btn-enviar:hover {
+    background-color: var(--color-rojo);
+}
+
+.alerta-formulario {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    display: none;
+}
+.alerta-formulario.exito {
+    background-color: #d4edda;
+    color: #155724;
+    display: block;
+}
+.alerta-formulario.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .contenedor-contacto { grid-template-columns: 1fr; }
+}

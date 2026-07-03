@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Único - Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="comun.css">
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Sabor<span>Único</span></div>
+        <ul class="nav-links">
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+        <a href="#" class="btn-reserva">Reservar Mesa</a>
+    </nav>
+
+    <header class="sec-titulo">
+        <h1>Ponte en Contacto</h1>
+        <p>¿Tienes dudas, comentarios o un evento? Estamos listos para atenderte.</p>
+    </header>
+
+    <main class="contenedor-contacto">
+        <section class="info-contacto">
+            <h2>Nuestra Ubicación</h2>
+            <div class="bloque-dato">
+                <h4>📍 Dirección</h4>
+                <p>Av. Principal Gastronómica #123, Ciudad Gourmet.</p>
+            </div>
+            <div class="bloque-dato">
+                <h4>📞 Teléfono / WhatsApp</h4>
+                <p>+1 234 567 890</p>
+            </div>
+            <div class="bloque-dato">
+                <h4>📧 Correo Electrónico</h4>
+                <p>hola@saborunico.com</p>
+            </div>
+            <div class="bloque-dato">
+                <h4>⏰ Horarios de Atención</h4>
+                <p>Lunes a Sábado: 12:00 PM – 11:30 PM<br>Domingos: 12:00 PM – 5:00 PM</p>
+            </div>
+        </section>
+
+        <section class="formulario-contacto">
+            <h2>Envíanos un Mensaje</h2>
+            <div id="alerta-formulario" class="alerta-formulario"></div>
+
+            <form id="formContacto">
+                <div class="grupo-input">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" required placeholder="Ej. Juan Pérez">
+                </div>
+                <div class="grupo-input">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" required placeholder="ejemplo@correo.com">
+                </div>
+                <div class="grupo-input">
+                    <label for="mensaje">¿En qué podemos ayudarte?</label>
+                    <textarea id="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="contacto.js"></script>
+</body>
+</html>
