@@ -1,3 +1,84 @@
+/* --- ESTILOS DE LA NAVBAR ORIGINAL --- */
+.navbar {
+    background-color: #121215;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #ffffff;
+    font-family: 'Playfair Display', 'Georgia', serif; 
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #ff4a5a;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+    color: #ff4a5a;
+}
+
+.btn-reserva {
+    background-color: #ff4a5a;
+    color: #ffffff;
+    padding: 12px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.btn-reserva:hover {
+    background-color: #ff3347;
+}
+
+/* --- TÍTULO DE LA SECCIÓN --- */
+.sec-titulo {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background-color: #121215;
+    color: #ffffff;
+}
+
+.sec-titulo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.sec-titulo p {
+    color: #b3b3b3;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- CONTENIDO DE CONTACTO --- */
 .contenedor-contacto {
     max-width: 1200px;
     margin: 50px auto;
@@ -8,13 +89,14 @@
 }
 
 .info-contacto {
-    background-color: var(--color-oscuro);
-    color: var(--color-claro);
+    background-color: #121215;
+    color: #ffffff;
     padding: 40px;
     border-radius: 12px;
 }
 
 .info-contacto h2 {
+    font-family: 'Playfair Display', serif;
     margin-bottom: 25px;
     font-size: 28px;
 }
@@ -24,27 +106,32 @@
 }
 
 .bloque-dato h4 {
-    color: var(--color-rojo);
+    color: #ff4a5a;
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 5px;
+    letter-spacing: 1px;
 }
 
 .bloque-dato p {
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     color: #e0e0e0;
 }
 
 .formulario-contacto {
-    background-color: var(--color-claro);
+    background-color: #ffffff;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .formulario-contacto h2 {
+    font-family: 'Playfair Display', serif;
     margin-bottom: 25px;
     font-size: 28px;
+    color: #1a191f;
 }
 
 .grupo-input {
@@ -56,26 +143,30 @@
     margin-bottom: 8px;
     font-weight: 500;
     font-size: 14px;
+    color: #333333;
+    font-family: 'Poppins', sans-serif;
 }
 
-.grupo-input input, .grupo-input textarea {
+.grupo-input input, 
+.grupo-input textarea {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid #cccccc;
     border-radius: 6px;
-    font-family: inherit;
+    font-family: 'Poppins', sans-serif;
     font-size: 15px;
     transition: border-color 0.3s;
 }
 
-.grupo-input input:focus, .grupo-input textarea:focus {
+.grupo-input input:focus, 
+.grupo-input textarea:focus {
     outline: none;
-    border-color: var(--color-rojo);
+    border-color: #ff4a5a;
 }
 
 .btn-enviar {
-    background-color: var(--color-oscuro);
-    color: var(--color-claro);
+    background-color: #121215;
+    color: #ffffff;
     border: none;
     padding: 14px 30px;
     border-radius: 6px;
@@ -84,12 +175,14 @@
     cursor: pointer;
     transition: background 0.3s;
     width: 100%;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn-enviar:hover {
-    background-color: var(--color-rojo);
+    background-color: #ff4a5a;
 }
 
+/* --- ALERTAS DINÁMICAS (JS) --- */
 .alerta-formulario {
     padding: 12px;
     margin-bottom: 20px;
@@ -97,12 +190,15 @@
     font-size: 14px;
     font-weight: 500;
     display: none;
+    font-family: 'Poppins', sans-serif;
 }
+
 .alerta-formulario.exito {
     background-color: #d4edda;
     color: #155724;
     display: block;
 }
+
 .alerta-formulario.error {
     background-color: #f8d7da;
     color: #721c24;
@@ -110,5 +206,7 @@
 }
 
 @media (max-width: 768px) {
-    .contenedor-contacto { grid-template-columns: 1fr; }
+    .contenedor-contacto {
+        grid-template-columns: 1fr;
+    }
 }

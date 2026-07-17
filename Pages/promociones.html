@@ -4,43 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabor Único - Promociones</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Vinculamos su propio CSS -->
-    <link rel="stylesheet" href="promociones.css">
+    <!-- Importación de fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Enlaces de estilos correctos saliendo de la carpeta Pages -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../Styles/promociones.css">
 </head>
 <body>
 
+    <!-- NAVBAR EXACTA A LA DE LA IMAGEN -->
     <nav class="navbar">
         <div class="logo">Sabor<span>Único</span></div>
         <ul class="nav-links">
+            <li><a href="../index.htm">Inicio</a></li>
+            <li><a href="menu.html">Menú</a></li>
             <li><a href="promociones.html" class="active">Promociones</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
-        <a href="#" class="btn-reserva">Reservar Mesa</a>
+        <a href="reserva.html" class="btn-reserva">Reservar Mesa</a>
     </nav>
 
     <header class="sec-titulo">
         <h1>Promociones Especiales</h1>
-        <p>Combinaciones exclusivas diseñadas para regalarte momentos llenos de sabor.</p>
+        <p>Aprovecha nuestros combos únicos diseñados para compartir los mejores sabores.</p>
     </header>
 
     <main class="contenedor-promos">
         <article class="tarjeta-promo">
             <div class="promo-img">
                 <span class="etiqueta-tag">Jueves</span>
-                <img src="img/promo-costillas.jpg" alt="Costillas y Mocktail">
+                <!-- Imagen enlazada directamente para Costillas BBQ y bebida -->
+                <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcS25l1hZTnjf3R6TI490-6qrpn-we-waDmGs1rKsxI_Ty8r4eVw1JN1EGX8snbg-4qU04p0gAElHrJaKSU" alt="Costillas a la BBQ con bebida roja">
             </div>
             <div class="promo-info">
                 <h3>Jueves de Costillas & Mocktails</h3>
                 <p>Compra unas deliciosas Costillas a la BBQ Premium y llévate tu segundo Mocktail de Frutos Rojos a mitad de precio.</p>
-                <div class="promo-precio">2x1 en Bebida</div>
+                <div class="promo-precio">2x1 en Bebidas</div>
             </div>
         </article>
 
         <article class="tarjeta-promo">
             <div class="promo-img">
                 <span class="etiqueta-tag">Lun a Mié</span>
-                <img src="img/promo-pizza.jpg" alt="Pizza y Postre">
+                <!-- Imagen enlazada directamente para Pizza de Prosciutto -->
+                <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQT-Fa4vH9NAXZL6t7DoRbHMHdhVTYwsJIm44r-sg0y0welIL9SsrJ5Vg1hHCozBWGGG2SS75dLh_38abM" alt="Pizza artesanal con Prosciutto">
             </div>
             <div class="promo-info">
                 <h3>Tardes de Pizza & Postre</h3>
@@ -52,7 +59,8 @@
         <article class="tarjeta-promo">
             <div class="promo-img">
                 <span class="etiqueta-tag">Almuerzo</span>
-                <img src="img/promo-ejecutivo.jpg" alt="Combo Oriental">
+                <!-- Imagen enlazada directamente para Combo Oriental (Gyozas) -->
+                <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTi7eR70Wrz3cphc4LQC2e1UuNwnaJcYr2AHMKbkx1UIe6jv5f43TmhKlarOu8LOcPb6SsC-G_686f8LSE" alt="Gyozas al vapor sobre cama de ensalada">
             </div>
             <div class="promo-info">
                 <h3>Combo Ejecutivo Oriental</h3>
@@ -62,7 +70,7 @@
         </article>
     </main>
 
-    <!-- Vinculamos su propio JS -->
-    <script src="promociones.js"></script>
+    <!-- Enlace de JS correcto saliendo de la carpeta Pages -->
+    <script src="../javascript/promociones.js"></script>
 </body>
 </html>
