@@ -8,8 +8,8 @@
 }
 
 .info-contacto {
-    background-color: var(--color-oscuro);
-    color: var(--color-claro);
+    background-color: var(--dark-color);
+    color: var(--text-light);
     padding: 40px;
     border-radius: 12px;
 }
@@ -24,10 +24,16 @@
 }
 
 .bloque-dato h4 {
-    color: var(--color-rojo);
+    color: var(--primary-color);
     font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 5px;
+}
+
+.bloque-dato h4 i {
+    margin-right: 8px;
+    width: 15px;
+    text-align: center;
 }
 
 .bloque-dato p {
@@ -36,7 +42,7 @@
 }
 
 .formulario-contacto {
-    background-color: var(--color-claro);
+    background-color: var(--secondary-color);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
@@ -70,12 +76,12 @@
 
 .grupo-input input:focus, .grupo-input textarea:focus {
     outline: none;
-    border-color: var(--color-rojo);
+    border-color: var(--primary-color);
 }
 
 .btn-enviar {
-    background-color: var(--color-oscuro);
-    color: var(--color-claro);
+    background-color: var(--dark-color);
+    color: var(--text-light);
     border: none;
     padding: 14px 30px;
     border-radius: 6px;
@@ -87,7 +93,7 @@
 }
 
 .btn-enviar:hover {
-    background-color: var(--color-rojo);
+    background-color: var(--primary-color);
 }
 
 .alerta-formulario {

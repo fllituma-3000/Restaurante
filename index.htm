@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabor Único - Restaurante</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header class="navbar">
         <div class="logo">
-            <a href="#">Sabor<span>Único</span></a>
+            <a href="index.htm">Sabor<span>Único</span></a>
         </div>
         <nav class="nav-menu">
-            <a href="#" class="active">Inicio</a>
+            <a href="index.htm" class="active">Inicio</a>
             <a href="Pages/menu.html">Menú</a>
-            <a href="#">Promociones</a>
-            <a href="#">Contacto</a>
+            <a href="Pages/promociones.html">Promociones</a>
+            <a href="Pages/contacto.html">Contacto</a>
         </nav>
         <div class="nav-btn">
-            <a href="#" class="btn-reserve">Reservar Mesa</a>
+            <a href="Pages/reserva.html" class="btn-reserve">Reservar Mesa</a>
         </div>
     </header>
 
@@ -34,10 +35,104 @@
             </p>
             <div class="hero-actions">
                 <a href="Pages/menu.html" class="btn-primary">Ver el Menú</a>
-                <a href="#" class="btn-secondary">Hacer Reserva</a>
+                <a href="Pages/reserva.html" class="btn-secondary">Hacer Reserva</a>
             </div>
         </div>
     </main>
+
+    <!-- ============================================= -->
+    <!-- =========== SECCIÓN DE CARACTERÍSTICAS ======== -->
+    <!-- ============================================= -->
+    <section class="features-section">
+        <div class="section-header">
+            <p class="section-subtitle">Por qué elegirnos</p>
+            <h2 class="section-title">Nuestra Promesa de Calidad</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="https://img.icons8.com/ios/100/ff4757/natural-food.png" alt="Icono Ingredientes">
+                </div>
+                <h3 class="feature-title">Ingredientes Locales</h3>
+                <p class="feature-description">Trabajamos con productores locales para garantizar la frescura y calidad en cada plato.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="https://img.icons8.com/ios/100/ff4757/chef-hat.png" alt="Icono Cocina">
+                </div>
+                <h3 class="feature-title">Alta Cocina</h3>
+                <p class="feature-description">Nuestros chefs combinan técnicas innovadoras con recetas tradicionales para sorprenderte.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="https://img.icons8.com/fluency-systems-regular/96/ff4757/wine-glass.png" alt="Icono Ambiente">
+                </div>
+                <h3 class="feature-title">Ambiente Exclusivo</h3>
+                <p class="feature-description">Disfruta de un espacio diseñado para el confort, ideal para cualquier ocasión especial.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- ============== SECCIÓN DE GALERÍA ============= -->
+    <!-- ============================================= -->
+    <section class="gallery-section">
+        <div class="section-header">
+            <p class="section-subtitle">Un Vistazo a Nuestro Mundo</p>
+            <h2 class="section-title">Nuestra Galería</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=700" alt="Postre de tarta de frutas">
+                <div class="gallery-overlay"><h3>Postres Artesanales</h3><p>Dulces creaciones para cerrar con broche de oro.</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=700" alt="Interior del restaurante">
+                <div class="gallery-overlay"><h3>Nuestro Ambiente</h3><p>Un espacio acogedor y elegante para tus reuniones.</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://editorialtelevisa.brightspotcdn.com/dims4/default/4b64540/2147483647/strip/true/crop/920x920+230+0/resize/1000x1000!/quality/90/?url=https%3A%2F%2Fk2-prod-editorial-televisa.s3.us-east-1.amazonaws.com%2Fbrightspot%2F5b%2F87%2F65de6bb54b71b14fd7009e8d7395%2Fcocteles.jpg" alt="Detalle de cóctel">
+                <div class="gallery-overlay"><h3>Cócteles de Autor</h3><p>Mixología creativa para paladares exigentes.</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=700" alt="Brunch en el restaurante">
+                <div class="gallery-overlay"><h3>Brunch Dominical</h3><p>La mejor forma de empezar tu día libre.</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=700" alt="Chef preparando comida">
+                <div class="gallery-overlay"><h3>Pasión en la Cocina</h3><p>Nuestros chefs en plena acción creativa.</p></div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?q=80&w=700" alt="Mesas del restaurante">
+                <div class="gallery-overlay"><h3>Listos para Servirte</h3><p>Cada detalle cuenta para tu comodidad.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- =========== SECCIÓN DE TESTIMONIOS ========== -->
+    <!-- ============================================= -->
+    <section class="testimonials-section">
+        <div class="section-header">
+            <p class="section-subtitle">Lo que dicen nuestros clientes</p>
+            <h2 class="section-title">Testimonios</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Una experiencia culinaria increíble. El servicio fue impecable y cada plato superó mis expectativas. ¡Volveré sin dudarlo!"</p>
+                <p class="testimonial-author">- Ana García</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"El ambiente es perfecto para una cena romántica. La comida es deliciosa, especialmente las costillas. ¡Totalmente recomendado!"</p>
+                <p class="testimonial-author">- Carlos Martínez</p>
+            </div>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
 
 </body>
 </html>

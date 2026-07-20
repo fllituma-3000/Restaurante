@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabor Único - Contacto</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="comun.css">
-    <link rel="stylesheet" href="contacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="../logo.png" type="image/png">
+    <!-- Añadimos la librería de iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../Styles/contacto.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Sabor<span>Único</span></div>
-        <ul class="nav-links">
-            <li><a href="promociones.html">Promociones</a></li>
-            <li><a href="contacto.html" class="active">Contacto</a></li>
-        </ul>
-        <a href="#" class="btn-reserva">Reservar Mesa</a>
-    </nav>
+    <header class="navbar">
+        <div class="logo">
+            <a href="../index.htm">Sabor<span>Único</span></a>
+        </div>
+        <nav class="nav-menu">
+            <a href="../index.htm">Inicio</a>
+            <a href="menu.html">Menú</a>
+            <a href="promociones.html">Promociones</a>
+            <a href="contacto.html" class="active">Contacto</a>
+        </nav>
+        <div class="nav-btn">
+            <a href="reserva.html" class="btn-reserve">Reservar Mesa</a>
+        </div>
+    </header>
 
     <header class="sec-titulo">
         <h1>Ponte en Contacto</h1>
@@ -28,19 +37,19 @@
         <section class="info-contacto">
             <h2>Nuestra Ubicación</h2>
             <div class="bloque-dato">
-                <h4>📍 Dirección</h4>
+                <h4><i class="fa-solid fa-map-marker-alt"></i> Dirección</h4>
                 <p>Av. Principal Gastronómica #123, Ciudad Gourmet.</p>
             </div>
             <div class="bloque-dato">
-                <h4>📞 Teléfono / WhatsApp</h4>
+                <h4><i class="fa-solid fa-phone"></i> Teléfono / WhatsApp</h4>
                 <p>+1 234 567 890</p>
             </div>
             <div class="bloque-dato">
-                <h4>📧 Correo Electrónico</h4>
+                <h4><i class="fa-solid fa-envelope"></i> Correo Electrónico</h4>
                 <p>hola@saborunico.com</p>
             </div>
             <div class="bloque-dato">
-                <h4>⏰ Horarios de Atención</h4>
+                <h4><i class="fa-solid fa-clock"></i> Horarios de Atención</h4>
                 <p>Lunes a Sábado: 12:00 PM – 11:30 PM<br>Domingos: 12:00 PM – 5:00 PM</p>
             </div>
         </section>
@@ -67,6 +76,6 @@
         </section>
     </main>
 
-    <script src="contacto.js"></script>
+    <script src="../javascript/contacto.js"></script>
 </body>
 </html>

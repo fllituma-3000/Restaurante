@@ -8,7 +8,7 @@
 }
 
 .tarjeta-promo {
-    background-color: var(--color-claro);
+    background-color: var(--secondary-color);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
@@ -37,8 +37,8 @@
     position: absolute;
     top: 15px;
     left: 15px;
-    background-color: var(--color-rojo);
-    color: var(--color-claro);
+    background-color: var(--primary-color);
+    color: var(--text-light);
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 12px;
@@ -56,7 +56,7 @@
 .promo-info h3 {
     font-size: 20px;
     margin-bottom: 10px;
-    color: var(--color-oscuro);
+    color: var(--dark-color);
 }
 
 .promo-info p {
@@ -69,5 +69,5 @@
 .promo-precio {
     font-size: 22px;
     font-weight: 700;
-    color: var(--color-rojo);
+    color: var(--primary-color);
 }

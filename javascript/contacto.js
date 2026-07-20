@@ -15,18 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nombre === '' || email === '' || mensaje === '') {
             alerta.textContent = 'Por favor, rellena todos los campos obligatorios.';
             alerta.className = 'alerta-formulario error'; // Aplica el estilo rojo de CSS
-            return; 
-        
-        alerta.textContent = `¡Gracias, ${nombre}! Tu mensaje ha sido enviado con éxito. Nos comunicaremos contigo pronto.`;
-        alerta.className = 'alerta-formulario exito'; // Aplica el estilo verde de CSS
-
-
-        formulario.reset();
-
-        
-        setTimeout(() => {
-            alerta.className = 'alerta-formulario';
-            alerta.style.display = 'none';
-        }, 5000);
+            alerta.style.display = 'block';
+            return;
+        } else {
+            alerta.textContent = `¡Gracias, ${nombre}! Tu mensaje ha sido enviado con éxito. Nos comunicaremos contigo pronto.`;
+            alerta.className = 'alerta-formulario exito'; // Aplica el estilo verde de CSS
+            alerta.style.display = 'block';
+    
+            formulario.reset();
+            
+            setTimeout(() => {
+                alerta.style.display = 'none';
+            }, 5000);
+        }
     });
 });

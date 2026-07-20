@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestro Menú - Sabor Único</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-   
+    <link rel="icon" href="../logo.png" type="image/png">
     <link rel="stylesheet" href="../styles.css">
     
     <link rel="stylesheet" href="../Styles/menu.css">
@@ -18,12 +18,12 @@
         </div>
         <nav class="nav-menu">
             <a href="../index.htm">Inicio</a>
-            <a href="#" class="active">Menú</a>
-            <a href="#">Promociones</a>
-            <a href="#">Contacto</a>
+            <a href="menu.html" class="active">Menú</a>
+            <a href="promociones.html">Promociones</a>
+            <a href="contacto.html">Contacto</a>
         </nav>
         <div class="nav-btn">
-            <a href="#" class="btn-reserve">Reservar Mesa</a>
+            <a href="reserva.html" class="btn-reserve">Reservar Mesa</a>
         </div>
     </header>
 
@@ -51,6 +51,7 @@
                         <span class="price">$16.50</span>
                     </div>
                     <p class="item-description">Costillas de cerdo ahumadas lentamente, bañadas en salsa BBQ artesanal acompañadas de papas rústicas.</p>
+                    <button class="add-to-cart-btn" data-id="costillas-bbq" data-name="Costillas a la BBQ" data-price="16.50">Añadir</button>
                 </div>
             </div>
 
@@ -62,6 +63,7 @@
                         <span class="price">$10.00</span>
                     </div>
                     <p class="item-description">Mix de lechugas frescas, salmón a la plancha, aguacate, tomates cherry y aderezo de cítricos.</p>
+                    <button class="add-to-cart-btn" data-id="ensalada-salmon" data-name="Ensalada de Salmón" data-price="10.00">Añadir</button>
                 </div>
             </div>
 
@@ -73,6 +75,7 @@
                         <span class="price">$14.00</span>
                     </div>
                     <p class="item-description">Masa madre crujiente, salsa de tomate de la casa, mozzarella, prosciutto madurado y rúcula fresca.</p>
+                    <button class="add-to-cart-btn" data-id="pizza-prosciutto" data-name="Pizza Prosciutto" data-price="14.00">Añadir</button>
                 </div>
             </div>
 
@@ -84,6 +87,7 @@
                         <span class="price">$6.50</span>
                     </div>
                     <p class="item-description">Bizcocho de chocolate oscuro con corazón líquido fundido, acompañado de helado de vainilla artesanal.</p>
+                    <button class="add-to-cart-btn" data-id="volcan-chocolate" data-name="Volcán de Chocolate" data-price="6.50">Añadir</button>
                 </div>
             </div>
 
@@ -95,6 +99,7 @@
                         <span class="price">$8.50</span>
                     </div>
                     <p class="item-description">Cinco empanadillas japonesas rellenas de carne de cerdo seleccionada y vegetales, con salsa ponzu.</p>
+                    <button class="add-to-cart-btn" data-id="gyozas-cerdo" data-name="Gyozas de Cerdo" data-price="8.50">Añadir</button>
                 </div>
             </div>
 
@@ -106,11 +111,37 @@
                         <span class="price">$5.00</span>
                     </div>
                     <p class="item-description">Refrescante combinación de infusión de frutos del bosque, agua con gas, limón y un toque de menta fresca.</p>
+                    <button class="add-to-cart-btn" data-id="mocktail-rojos" data-name="Mocktail Frutos Rojos" data-price="5.00">Añadir</button>
                 </div>
             </div>
 
         </div>
     </section>
+
+    <aside class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Mi Pedido</h3>
+            <button class="close-cart-btn">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Los items del carrito se agregarán aquí con JS -->
+            <p class="cart-empty-msg">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total:</strong>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="btn-checkout">Realizar Pedido</button>
+            <button class="btn-clear-cart">Vaciar Carrito</button>
+        </div>
+    </aside>
+
+    <!-- Botón flotante del carrito -->
+    <div class="cart-icon-wrapper floating-cart">
+        <img src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart--v1.png" alt="Carrito" class="cart-icon">
+        <span class="cart-item-count">0</span>
+    </div>
 
     <script src="../javascript/menu.js"></script>
 </body>

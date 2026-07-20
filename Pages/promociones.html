@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabor Único - Promociones</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Vinculamos su propio CSS -->
-    <link rel="stylesheet" href="promociones.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="../logo.png" type="image/png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../Styles/promociones.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Sabor<span>Único</span></div>
-        <ul class="nav-links">
-            <li><a href="promociones.html" class="active">Promociones</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-        <a href="#" class="btn-reserva">Reservar Mesa</a>
-    </nav>
+    <header class="navbar">
+        <div class="logo">
+            <a href="../index.htm">Sabor<span>Único</span></a>
+        </div>
+        <nav class="nav-menu">
+            <a href="../index.htm">Inicio</a>
+            <a href="menu.html">Menú</a>
+            <a href="promociones.html" class="active">Promociones</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <div class="nav-btn">
+            <a href="reserva.html" class="btn-reserve">Reservar Mesa</a>
+        </div>
+    </header>
 
     <header class="sec-titulo">
         <h1>Promociones Especiales</h1>
@@ -27,8 +34,8 @@
     <main class="contenedor-promos">
         <article class="tarjeta-promo">
             <div class="promo-img">
-                <span class="etiqueta-tag">Jueves</span>
-                <img src="img/promo-costillas.jpg" alt="Costillas y Mocktail">
+                <span class="etiqueta-tag">Jueves</span> 
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600" alt="Costillas y Mocktail">
             </div>
             <div class="promo-info">
                 <h3>Jueves de Costillas & Mocktails</h3>
@@ -40,7 +47,7 @@
         <article class="tarjeta-promo">
             <div class="promo-img">
                 <span class="etiqueta-tag">Lun a Mié</span>
-                <img src="img/promo-pizza.jpg" alt="Pizza y Postre">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600" alt="Pizza y Postre">
             </div>
             <div class="promo-info">
                 <h3>Tardes de Pizza & Postre</h3>
@@ -52,7 +59,7 @@
         <article class="tarjeta-promo">
             <div class="promo-img">
                 <span class="etiqueta-tag">Almuerzo</span>
-                <img src="img/promo-ejecutivo.jpg" alt="Combo Oriental">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy1hmhjq6XXX4o7cePziqakn7nuUcfcK2SnZhH8jEj3Ic5Y66oN1fIV90&s=10" alt="Combo Oriental de gyozas y ensalada">
             </div>
             <div class="promo-info">
                 <h3>Combo Ejecutivo Oriental</h3>
@@ -61,8 +68,5 @@
             </div>
         </article>
     </main>
-
-    <!-- Vinculamos su propio JS -->
-    <script src="promociones.js"></script>
 </body>
 </html>

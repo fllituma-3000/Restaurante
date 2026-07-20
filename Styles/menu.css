@@ -1,23 +1,30 @@
-/* --- VARIABLES --- */
-:root {
-    --primary-color: #ff4757;
-    --dark-color: #1e1e24;
-    --text-muted: #747d8c;
-    --bg-light: #ffffff;
-    --bg-section: #f8f9fa;
-    --font-titles: 'Playfair Display', serif;
-    --font-body: 'Poppins', sans-serif;
-}
+/*
+    Estilos específicos para la página del menú.
+    Las variables de color y las reglas generales se heredan de styles.css
+*/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* --- ICONO DE CARRITO (FLOTANTE) --- */
+.floating-cart {
+    position: relative;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.cart-item-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 body {
     font-family: var(--font-body);
-    background-color: var(--bg-section);
+    /* El color de fondo ahora se controla desde styles.css para consistencia */
+    background-color: #f8f9fa; 
     color: var(--dark-color);
 }
 
@@ -25,9 +32,9 @@ body {
 .menu-section {
     /* Añadimos un padding superior para dejar espacio a la navbar fija */
     padding-top: 120px; 
+    padding-bottom: 60px; /* Espacio extra al final */
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .menu-header {
@@ -67,7 +74,7 @@ body {
 }
 
 .filter-btn {
-    background-color: var(--bg-light);
+    background-color: var(--secondary-color); /* Usamos la variable de styles.css */
     color: var(--dark-color);
     border: 1px solid #e4e7eb;
     padding: 10px 24px;
@@ -83,7 +90,7 @@ body {
 .filter-btn:hover, 
 .filter-btn.active {
     background-color: var(--primary-color);
-    color: #ffffff;
+    color: var(--text-light); /* Usamos la variable de styles.css */
     border-color: var(--primary-color);
     transform: translateY(-2px);
 }
@@ -91,75 +98,94 @@ body {
 /* --- CUADRÍCULA DEL MENÚ (GRID) --- */
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Muestra 2 columnas si hay espacio */
+    /* Usamos auto-fill para que se creen columnas simétricas */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 30px;
+    justify-content: center;
+    align-items: stretch; /* Fuerza a que todas las tarjetas de una misma fila midan exactamente lo mismo */
 }
 
 /* Contenedor del plato individual */
 .menu-item {
     display: flex;
-    background-color: var(--bg-light);
+    flex-direction: row; 
+    background-color: var(--secondary-color); 
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    transition: all 0.4s ease;
+    width: 100%; /* Asegura estabilidad en el ancho */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efectos de hover */
 }
 
-/* Animación cuando el elemento se oculta o se muestra */
-.menu-item.hide {
-    display: none;
-}
-
+/* Efecto visual al pasar el mouse por encima de una tarjeta */
 .menu-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Clase para ocultar elementos del menú con el filtro de forma limpia */
+.menu-item.hide {
+    display: none !important; /* Elimina por completo la tarjeta del flujo del Grid */
+}
+
 .item-img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover; /* Recorta la imagen para que encaje perfectamente */
+    width: 160px; 
+    height: 100%; /* Ocupa el 100% de la altura de la tarjeta */
+    min-height: 180px; 
+    flex-shrink: 0; 
+    object-fit: cover; /* Evita que la imagen se deforme o se estire */
 }
 
 .item-info {
-    padding: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
+    flex-direction: column; 
+    justify-content: space-between; /* Empuja el título arriba y el botón abajo equitativamente */
+    padding: 15px 20px; 
+    flex: 1; 
 }
 
+/* Encapsulamos el título y la descripción para un mejor control del espacio */
 .item-title-price {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     gap: 10px;
-}
-
-.item-title-price h3 {
-    font-family: var(--font-titles);
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.price {
-    color: var(--primary-color);
-    font-weight: 600;
-    font-size: 18px;
-    white-space: nowrap;
 }
 
 .item-description {
     font-size: 14px;
-    color: var(--text-muted);
+    color: #747d8c; 
     line-height: 1.5;
+    margin-bottom: 15px; /* Espacio controlado antes del botón */
+}
+
+.add-to-cart-btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    align-self: flex-start; 
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Garantiza que se alinee perfectamente abajo */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #e5394a;
 }
 
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-    .menu-grid {
+    .menu-grid,
+    .menu-grid.has-two-items {
         grid-template-columns: 1fr; /* 1 sola columna en dispositivos pequeños */
+    }
+
+    .menu-grid.has-two-items .menu-item:nth-child(odd),
+    .menu-grid.has-two-items .menu-item:nth-child(even) {
+        justify-self: stretch;
     }
     
     .menu-item {
@@ -174,4 +200,163 @@ body {
     .menu-title {
         font-size: 32px;
     }
+}
+
+/* --- BOTÓN FLOTANTE DEL CARRITO --- */
+.floating-cart {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* --- PANEL DEL CARRITO (SIDEBAR) --- */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Empieza oculto fuera de la pantalla */
+    width: 380px;
+    height: 100%;
+    background-color: var(--secondary-color);
+    box-shadow: -10px 0 25px rgba(0, 0, 0, 0.1);
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.4s ease-in-out;
+}
+
+.cart-sidebar.open {
+    right: 0; /* Se muestra al añadir la clase 'open' */
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e4e7eb;
+}
+
+.cart-header h3 {
+    font-family: var(--font-titles);
+    font-size: 22px;
+}
+
+.close-cart-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #747d8c;
+}
+
+.cart-items {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px 20px;
+}
+
+.cart-empty-msg {
+    text-align: center;
+    margin-top: 40px;
+    color: #747d8c;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f1f2f6;
+}
+
+.cart-item-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-info h4 {
+    font-size: 15px;
+    margin: 0 0 5px 0;
+}
+
+.cart-item-price {
+    font-size: 14px;
+    color: #747d8c;
+}
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    background: #f1f2f6;
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.cart-item-quantity {
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.cart-footer {
+    padding: 20px;
+    border-top: 1px solid #e4e7eb;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.btn-checkout, .btn-clear-cart {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-checkout {
+    background-color: var(--primary-color);
+    color: white;
+    margin-bottom: 10px;
+}
+
+.btn-clear-cart {
+    background-color: #e4e7eb;
+    color: #57606f;
+}
+
+@media (max-width: 480px) {
+    .cart-sidebar {
+        width: 100%;
+    }
+}
+
+.floating-cart:hover {
+    transform: scale(1.1);
 }
